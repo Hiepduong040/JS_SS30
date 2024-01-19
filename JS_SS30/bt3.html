@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function rearrangeCharacters(str) {
+        const letters = [];
+        const numbers = [];
+        const specials = [];
+
+        for (let i = 0; i < str.length; i++) {
+          const char = str[i];
+
+          if (/[a-zA-Z]/.test(char)) {
+            letters.push(char);
+          } else if (/[0-9]/.test(char)) {
+            numbers.push(char);
+          } else {
+            specials.push(char);
+          }
+        }
+
+        return letters.concat(numbers, specials);
+      }
+
+      // Yêu cầu người dùng nhập vào chuỗi
+      const input = prompt("Nhập vào một chuỗi:");
+
+      // Gọi hàm với chuỗi đã nhập
+      const result = rearrangeCharacters(input);
+
+      // In kết quả ra màn hình
+      console.log("Mảng ký tự đã sắp xếp:", result);
+    </script>
+  </body>
+</html>

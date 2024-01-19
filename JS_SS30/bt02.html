@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const n = +prompt("Nhập số nguyên n:");
+      let i = 1;
+      let total = 0;
+      while (i <= n) {
+        total = total + i;
+        i += 2;
+      }
+      if (total % 2 === 1) {
+        console.log("Tổng các số lẻ tính đến n là:", total);
+      } else {
+        total = total - i;
+        console.log("Tổng các số lẻ tính đến n là:", total);
+      }
+    </script>
+  </body>
+</html>
